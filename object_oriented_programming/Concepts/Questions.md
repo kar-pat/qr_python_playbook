@@ -1,6 +1,6 @@
 
 What is a class?
-
+Classes define functions called methods, which identify the behaviors and actions that an object created from the class can perform with its data.
 What are member variables?
 
 What are methods?
