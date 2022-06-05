@@ -28,15 +28,19 @@ How do you create an instance of a class?
 To create an instance of the class we define the instance with the class names and assign instance attributes in brackets.
 
 How does Python do inheritance?
+When a class is declared as an inheritance, the new class inherits all the  attributes of the parent class. To prevent duplicating code, we can use super() to implement all methods of the parent class in one line. The inherited methods can be overwritten by rewriting the method with the same name in the child class.
 
 How does multiple inheritance work?
+In multiple inheritance the child class inherits all the attributes of multiple parent classes, when the parent classes are declared as arguments in the constructor. 
 
 What is a mixin?
+Mixin is a basic class that has a   behavior to be inherited by a class, to do this it is spevified in the constructor of the child class. 
 
 How do you override a method?
 To override a method of the parent class you define a method with the similar name on the child class
 
 What is `super()` for?
+`super()` is a method used to inherit the methods of the parent class to the subclasses while avoiding code repititions.
 
 How do you check if an object is an instance of a certain class?
 using the `isinstance()` method
@@ -46,9 +50,19 @@ How do you check if an object is an instance of a certain class or any of its pa
 What are the conventions for private variables?
 
 Are private variables accessible from outside the class?
+no
 
 What are the differences between instance methods, class methods and static methods?
 
+
 What is method resolution order (MRO) and how does it work?
+method resolution order is the order that decides which parent classes to search for methods in to be implemented. It follows the order in which the methods are declared in the class constructor.
 
 When would you choose to use inheritance or composition?
+1. Use inheritance over composition in Python to model a clear is a relationship. First, justify the relationship between the derived class and its base. Then, reverse the relationship and try to justify it. If you can justify the relationship in both directions, then you should not use inheritance between them.
+2. Use inheritance over composition in Python to leverage both the interface and implementation of the base class.
+3. Use inheritance over composition in Python to provide mixin features to several unrelated classes when there is only one implementation of that feature.
+4. Use composition over inheritance in Python to model a has a relationship that leverages the implementation of the component class.
+5. Use composition over inheritance in Python to create components that can be reused by multiple classes in your Python applications.
+6. Use composition over inheritance in Python to implement groups of behaviors and policies that can be applied interchangeably to other classes to customize their behavior.
+7.     Use composition over inheritance in Python to enable run-time behavior changes without affecting existing classes.
